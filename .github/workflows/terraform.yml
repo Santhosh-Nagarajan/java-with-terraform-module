@@ -1,4 +1,4 @@
-name: Terraform Module Use Deployments
+name: Terraform Module Use Java
 
 on:
   push:
