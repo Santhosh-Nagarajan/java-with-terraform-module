@@ -11,7 +11,7 @@ provider "docker" {
   host = "unix:///var/run/docker.sock"
 }
 
-module "example" {
+module "example_java" {
   source = "./modules/register"
 
   number             = var.number
@@ -19,4 +19,8 @@ module "example" {
   dockerhub_username = var.dockerhub_username
   dockerhub_password = var.dockerhub_password
 }
+output "docker_image_ids" {
+  value = module.example_java.docker_image_ids
+}
+
 
